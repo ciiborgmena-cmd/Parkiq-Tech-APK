@@ -24,13 +24,16 @@ public class AuthRepositoryMock implements AuthRepository {
 
         // Datos de prueba (equivalentes a un INSERT en tu tabla Usuario)
         credenciales.put("admin", "1234");
-        usuarios.put("admin", new Administrador(1, "Ana Torres", "ana@parkiqtech.com", "3001234567", 1));
+        usuarios.put("admin", new Administrador(1, "Ana Torres",
+                "ana@parkiqtech.com", "3001234567", 1));
 
         credenciales.put("empleado1", "1234");
-        usuarios.put("empleado1", new Empleado(2, "Carlos Ruiz", "carlos@parkiqtech.com", "3007654321", "EMP-001", new Date()));
+        usuarios.put("empleado1", new Empleado(2, "Carlos Ruiz",
+                "carlos@parkiqtech.com", "3007654321", "EMP-001", new Date()));
 
         credenciales.put("cliente1", "1234");
-        usuarios.put("cliente1", new Cliente(3, "Juan Pérez", "juan@example.com", "3009876543"));
+        usuarios.put("cliente1", new Cliente(3, "Juan Pérez",
+                "juan@example.com", "3009876543"));
     }
 
     @Override

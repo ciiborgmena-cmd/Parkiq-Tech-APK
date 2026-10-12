@@ -13,7 +13,8 @@ public class VehiculoFactoryTest {
 
     @Test
     public void crear_automovil_debeDevolverInstanciaCorrecta() {
-        Vehiculo vehiculo = VehiculoFactory.crear("AUTOMOVIL", "ABC-123", "Toyota", "Corolla", "Rojo");
+        Vehiculo vehiculo = VehiculoFactory.crear(
+                "AUTOMOVIL", "ABC-123", "Toyota", "Corolla", "Rojo");
 
         assertEquals(true, vehiculo instanceof Automovil);
         assertEquals("AUTOMOVIL", vehiculo.getTipo());
@@ -24,7 +25,8 @@ public class VehiculoFactoryTest {
     public void crear_tipoInvalido_debeLanzarExcepcion() {
         // Verifica que el Factory rechace tipos de vehículo no soportados
         assertThrows(IllegalArgumentException.class, () -> {
-            VehiculoFactory.crear("AVION", "XXX-000", "N/A", "N/A", "N/A");
+            VehiculoFactory.crear(
+                    "AVION", "XXX-000", "N/A", "N/A", "N/A");
         });
     }
 }
